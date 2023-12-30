@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:quran_concept/core/utils/assets.dart';
 
 class CustomAppBarTitle extends StatelessWidget {
   const CustomAppBarTitle({
     super.key,
+    required this.title,
+    required this.leadingAsset,
   });
+  final String title;
+  final String leadingAsset;
 
   @override
   Widget build(BuildContext context) {
@@ -14,16 +19,16 @@ class CustomAppBarTitle extends StatelessWidget {
         Row(
           children: [
             SvgPicture.asset(
-              "assets/images/svgs/menu.svg",
+              leadingAsset,
               width: 24,
               height: 24,
             ),
             const SizedBox(
               width: 24,
             ),
-            const Text(
-              'Quran App',
-              style: TextStyle(
+            Text(
+              title,
+              style: const TextStyle(
                 color: Color(0xFF672CBC),
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
@@ -33,7 +38,7 @@ class CustomAppBarTitle extends StatelessWidget {
           ],
         ),
         SvgPicture.asset(
-          "assets/images/svgs/search.svg",
+          AppAssets.kSearch,
           width: 24,
           height: 24,
         ),

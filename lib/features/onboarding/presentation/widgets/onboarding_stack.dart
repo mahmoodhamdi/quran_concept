@@ -39,7 +39,7 @@ class OnboardigStack extends StatelessWidget {
               left: 64,
               child: GestureDetector(
                   onTap: () {
-                    GoRouter.of(context).pushReplacement(AppRouter.kHomeView);
+                    GoRouter.of(context).pushReplacement(AppRouter.kAyatView);
                   },
                   child: const GetstartedButton()),
             )
