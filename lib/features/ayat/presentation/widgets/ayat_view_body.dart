@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:quran_concept/core/utils/assets.dart';
 import 'package:quran_concept/core/widgets/custom_app_bar_title.dart';
+import 'package:quran_concept/features/ayat/presentation/widgets/ayat_listview.dart';
+import 'package:quran_concept/features/ayat/presentation/widgets/sura_details_stack.dart';
 
 class AyatViewBody extends StatelessWidget {
   const AyatViewBody({super.key});
@@ -13,155 +14,23 @@ class AyatViewBody extends StatelessWidget {
         title: const CustomAppBarTitle(
             title: "Al-Fatiah", leadingAsset: AppAssets.kBackspace),
       ),
-      body: SafeArea(
+      body: const SafeArea(
           child: Padding(
-        padding: const EdgeInsets.only(left: 24, right: 24, top: 24),
-        child: Column(
-          children: [
-            SizedBox(
-              width: 327,
-              height: 295,
-              child: Stack(
-                clipBehavior: Clip.antiAlias,
+        padding: EdgeInsets.only(left: 24, right: 24, top: 24),
+        child: CustomScrollView(
+          physics: BouncingScrollPhysics(),
+          slivers: [
+            SliverToBoxAdapter(
+              child: Column(
                 children: [
-                  Container(
-                    width: 327,
-                    height: 295,
-                    decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(16)),
-                      gradient: LinearGradient(
-                        begin: Alignment(0.71, -0.71),
-                        end: Alignment(-0.71, 0.71),
-                        colors: [Color(0xFFDF98FA), Color(0xFF9055FF)],
-                      ),
-                    ),
-                    child: Column(
-                      children: [
-                        Column(
-                          children: [
-                            const SizedBox(
-                              height: 28,
-                            ),
-                            const Text(
-                              'Al-Fatiah',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 26,
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.w500,
-                                height: 0,
-                              ),
-                            ),
-                            const SizedBox(
-                              height: 4,
-                            ),
-                            const Text(
-                              'The Opening',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 16,
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.w500,
-                                height: 0,
-                              ),
-                            ),
-                            const SizedBox(
-                              height: 16,
-                            ),
-                            Container(
-                              width: 200,
-                              decoration: ShapeDecoration(
-                                shape: RoundedRectangleBorder(
-                                  side: BorderSide(
-                                    width: 1,
-                                    strokeAlign: BorderSide.strokeAlignCenter,
-                                    color: Colors.white
-                                        .withOpacity(0.3499999940395355),
-                                  ),
-                                ),
-                              ),
-                            ),
-                            const SizedBox(
-                              height: 16,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                const Text(
-                                  'MECCAN',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 14,
-                                    fontFamily: 'Poppins',
-                                    fontWeight: FontWeight.w500,
-                                    height: 0,
-                                  ),
-                                ),
-                                const SizedBox(
-                                  width: 5,
-                                ),
-                                Container(
-                                  width: 4,
-                                  height: 4,
-                                  decoration: ShapeDecoration(
-                                    color: Colors.white
-                                        .withOpacity(0.3499999940395355),
-                                    shape: const OvalBorder(),
-                                  ),
-                                ),
-                                const SizedBox(
-                                  width: 5,
-                                ),
-                                const Text(
-                                  '7 VERSES',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 14,
-                                    fontFamily: 'Poppins',
-                                    fontWeight: FontWeight.w500,
-                                    height: 0,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            const SizedBox(
-                              height: 48,
-                            ),
-                            SvgPicture.asset(
-                              AppAssets.kBasmla,
-                              height: 48,
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                  Opacity(
-                    opacity: .15,
-                    child: Align(
-                      alignment: Alignment.bottomRight,
-                      child: SvgPicture.asset(
-                        AppAssets.kSuraQuran,
-                        height: 180,
-                        width: 324,
-                      ),
-                    ),
+                  SuraDetailsStack(),
+                  SizedBox(
+                    height: 24,
                   ),
                 ],
               ),
             ),
-            Container(
-              width: 327,
-              height: 47,
-              decoration: ShapeDecoration(
-                color: const Color(0x0C121931),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-              ),
-            )
+            SliverFillRemaining(child: AyatListview()),
           ],
         ),
       )),
