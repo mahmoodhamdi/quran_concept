@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:quran_concept/core/utils/assets.dart';
 import 'package:quran_concept/features/home/presentation/widgets/last_read_details.dart';
 
 class LastReadBox extends StatelessWidget {
@@ -34,7 +35,7 @@ class LastReadBox extends StatelessWidget {
                 Row(
                   children: [
                     SvgPicture.asset(
-                      "assets/images/svgs/lastreadicon.svg",
+AppAssets.kLastReadIcon,
                       width: 20,
                       height: 20,
                     ),
@@ -65,7 +66,7 @@ class LastReadBox extends StatelessWidget {
             children: [
               Align(
                   alignment: Alignment.bottomRight,
-                  child: SvgPicture.asset("assets/images/svgs/lastread.svg")),
+                  child: SvgPicture.asset(AppAssets.kLastRead)),
             ],
           )
         ],
