@@ -1,3 +1,4 @@
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:go_router/go_router.dart';
 import 'package:quran_concept/features/ayat/presentation/views/ayat_view.dart';
 import 'package:quran_concept/features/home/presentation/views/home_view.dart';
@@ -10,7 +11,12 @@ abstract class AppRouter {
   static final router = GoRouter(routes: [
     GoRoute(
       path: '/',
-      builder: (context, state) => const OnboardingView(),
+      builder: (context, state) {
+        FlutterNativeSplash.remove();
+        
+
+       return const OnboardingView();
+      },
     ),
     GoRoute(
       path: kHomeView,

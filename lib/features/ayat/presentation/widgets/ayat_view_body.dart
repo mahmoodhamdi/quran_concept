@@ -32,7 +32,7 @@ class AyatViewBody extends StatelessWidget {
                       gradient: LinearGradient(
                         begin: Alignment(0.71, -0.71),
                         end: Alignment(-0.71, 0.71),
-                        colors: [Color(0xFF9055FF), Color(0xFFDF98FA)],
+                        colors: [Color(0xFFDF98FA), Color(0xFF9055FF)],
                       ),
                     ),
                     child: Column(
@@ -127,10 +127,11 @@ class AyatViewBody extends StatelessWidget {
                               ],
                             ),
                             const SizedBox(
-                              height: 32,
+                              height: 48,
                             ),
                             SvgPicture.asset(
                               AppAssets.kBasmla,
+                              height: 48,
                             ),
                           ],
                         ),
@@ -138,19 +139,29 @@ class AyatViewBody extends StatelessWidget {
                     ),
                   ),
                   Opacity(
-                    opacity: .20,
-                    child: Positioned(
-                      top: 50,
-                      child: SizedBox(
+                    opacity: .15,
+                    child: Align(
+                      alignment: Alignment.bottomRight,
+                      child: SvgPicture.asset(
+                        AppAssets.kSuraQuran,
+                        height: 180,
                         width: 324,
-                        height: 198,
-                        child: SvgPicture.asset(AppAssets.kSuraQuran),
                       ),
                     ),
                   ),
                 ],
               ),
             ),
+            Container(
+              width: 327,
+              height: 47,
+              decoration: ShapeDecoration(
+                color: const Color(0x0C121931),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+            )
           ],
         ),
       )),
