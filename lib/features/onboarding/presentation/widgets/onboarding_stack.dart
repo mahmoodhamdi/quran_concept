@@ -44,12 +44,7 @@ class OnboardigStack extends StatelessWidget {
               top: responsiveHeight - screenWidth * 0.08,
               left: responsiveWidth * 0.25,
               right: responsiveWidth * 0.25,
-              child: GestureDetector(
-                onTap: () {
-                  GoRouter.of(context).pushReplacement(AppRouter.kAyatView);
-                },
-                child: const GetstartedButton(),
-              ),
+              child: const GetstartedButton(),
             ),
           ],
         ),

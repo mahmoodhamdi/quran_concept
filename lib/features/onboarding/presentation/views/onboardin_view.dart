@@ -6,6 +6,6 @@ class OnboardingView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return OnBoardingBody();
+    return const OnBoardingBody();
   }
 }
