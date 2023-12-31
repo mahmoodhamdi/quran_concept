@@ -9,15 +9,11 @@ class OnBoardingBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 86),
+        padding: EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(
-          children: [
-            TitleSection(),
-            SizedBox(
-              height: 46,
-            ),
-            OnboardigStack()
-          ],
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [TitleSection(), OnboardigStack()],
         ),
       ),
     );

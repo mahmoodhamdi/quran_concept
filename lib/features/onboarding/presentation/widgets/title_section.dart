@@ -7,8 +7,8 @@ class TitleSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
+    return const Column(
+        children: [
         Text(
           'Quran App',
           textAlign: TextAlign.center,
@@ -19,9 +19,7 @@ class TitleSection extends StatelessWidget {
             height: 0,
           ),
         ),
-        SizedBox(
-          height: 16,
-        ),
+        SizedBox(height: 16,),
         SizedBox(
           child: Text(
             textAlign: TextAlign.center,

@@ -2,28 +2,30 @@ import 'package:flutter/material.dart';
 
 class GetstartedButton extends StatelessWidget {
   const GetstartedButton({
-    super.key,
-  });
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+
     return Container(
-      width: 185,
-      height: 65,
+      width: screenWidth * 0.4,
+      height: screenWidth * 0.14,
       decoration: ShapeDecoration(
         color: const Color(0xFFF9B091),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(30),
+          borderRadius: BorderRadius.circular(screenWidth * 0.07),
         ),
       ),
-      child: const Center(
+      child: Center(
         child: Text(
           'Get Started',
           style: TextStyle(
             color: Colors.white,
-            fontSize: 18,
+            fontSize: screenWidth * 0.04,
             fontWeight: FontWeight.w600,
-            height: 0,
+            height: 1.2,
           ),
         ),
       ),
