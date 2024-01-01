@@ -5,12 +5,13 @@ class BottomSheetWidget extends StatelessWidget {
   const BottomSheetWidget({
     super.key,
   });
-
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
+
     return Container(
       width: double.infinity,
-      height: 80,
+      height: size.height*.12,
       decoration: const BoxDecoration(
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(16),

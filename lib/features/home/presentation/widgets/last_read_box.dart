@@ -12,7 +12,7 @@ class LastReadBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       clipBehavior: Clip.none,
-      width: 326,
+      width: double.infinity,
       height: 131,
       decoration: ShapeDecoration(
         gradient: const LinearGradient(

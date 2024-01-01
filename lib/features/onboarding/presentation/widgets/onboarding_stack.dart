@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:go_router/go_router.dart';
-import 'package:quran_concept/core/utils/app_router.dart';
 import 'package:quran_concept/core/utils/assets.dart';
 import 'package:quran_concept/features/onboarding/presentation/widgets/getstarted_button.dart';
 

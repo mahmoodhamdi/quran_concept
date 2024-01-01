@@ -11,7 +11,7 @@ class AsslamWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SizedBox(
-          width: 257,
+          width: double.infinity,
           child: Opacity(
             opacity: 0.80,
             child: Text(

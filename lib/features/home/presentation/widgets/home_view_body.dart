@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:quran_concept/core/utils/assets.dart';
 import 'package:quran_concept/core/widgets/bottom_sheet_widget.dart';
 import 'package:quran_concept/core/widgets/custom_app_bar_title.dart';
-import 'package:quran_concept/features/home/presentation/widgets/asslam_widget.dart';
+import 'package:quran_concept/features/home/presentation/widgets/custom_tab_bar.dart';
 import 'package:quran_concept/features/home/presentation/widgets/last_read_box.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -22,15 +22,21 @@ class HomeViewBody extends StatelessWidget {
       body: const SafeArea(
           child: Padding(
         padding: EdgeInsets.only(left: 24, right: 24, top: 24),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            AsslamWidget(),
-            SizedBox(
-              height: 24,
+        child: CustomScrollView(
+          physics: NeverScrollableScrollPhysics(),
+          slivers: [
+            SliverToBoxAdapter(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  LastReadBox(),
+                ],
+              ),
             ),
-            LastReadBox(),
-            Spacer(),
+            SliverFillRemaining(
+              child:
+                  CustomTabBar(),
+            )
           ],
         ),
       )),

@@ -19,4 +19,5 @@ abstract class AppAssets {
   static const String kSuraBox = "assets/images/svgs/Sura_box.svg";
   static const String kSuraQuran = "assets/images/svgs/SuraQuran.svg";
   static const String kBasmla = "assets/images/svgs/basmla.svg";
+  static const String kAyaNumber = "assets/images/pngs/ayaNumber.png";
 }

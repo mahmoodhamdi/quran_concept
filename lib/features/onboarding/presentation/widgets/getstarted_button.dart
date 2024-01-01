@@ -12,9 +12,9 @@ class GetstartedButton extends StatelessWidget {
     double screenWidth = MediaQuery.of(context).size.width;
 
     return GestureDetector(
-                onTap: () {
-                  GoRouter.of(context).pushReplacement(AppRouter.kAyatView);
-                },
+      onTap: () {
+        GoRouter.of(context).pushReplacement(AppRouter.kHomeView);
+      },
       child: Container(
         width: screenWidth * 0.4,
         height: screenWidth * 0.14,
