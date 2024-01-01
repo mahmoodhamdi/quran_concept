@@ -6,7 +6,8 @@ class AyatListview extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(itemCount: 55,
+    return ListView.builder(
+      itemCount: 55,
       physics: const BouncingScrollPhysics(),
       itemBuilder: (context, index) {
         return const AyaContentSection();
