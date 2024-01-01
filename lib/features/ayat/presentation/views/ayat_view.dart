@@ -6,6 +6,6 @@ class AyatView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AyatViewBody();
+    return const AyatViewBody();
   }
 }
