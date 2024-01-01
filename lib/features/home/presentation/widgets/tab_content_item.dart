@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:quran_concept/core/utils/assets.dart';
+import 'package:quran_concept/features/home/data/models/sura_model.dart';
 
 class TabContentItem extends StatelessWidget {
   const TabContentItem({
     super.key,
     required this.size,
+    required this.suraModel,
   });
 
   final Size size;
-
+  final SuraModel suraModel;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -28,10 +30,10 @@ class TabContentItem extends StatelessWidget {
                         image: DecorationImage(
                             image: AssetImage(AppAssets.kAyaNumber),
                             fit: BoxFit.cover)),
-                    child: const Center(
+                    child: Center(
                       child: Text(
-                        "1",
-                        style: TextStyle(
+                        "${suraModel.id}",
+                        style: const TextStyle(
                           color: Color(0xFF230E4E),
                           fontSize: 14,
                           fontFamily: 'Poppins',
@@ -49,9 +51,9 @@ class TabContentItem extends StatelessWidget {
                       SizedBox(
                         height: size.height * .012,
                       ),
-                      const Text(
-                        'Al-Fatiah',
-                        style: TextStyle(
+                      Text(
+                        suraModel.nameSimple,
+                        style: const TextStyle(
                           color: Color(0xFF230E4E),
                           fontSize: 16,
                           fontFamily: 'Poppins',
@@ -61,9 +63,9 @@ class TabContentItem extends StatelessWidget {
                       ),
                       Row(
                         children: [
-                          const Text(
-                            'MECCAN',
-                            style: TextStyle(
+                          Text(
+                            suraModel.revelationPlace,
+                            style: const TextStyle(
                               color: Color(0xFF8789A3),
                               fontSize: 12,
                               fontFamily: 'Poppins',
@@ -85,9 +87,9 @@ class TabContentItem extends StatelessWidget {
                           const SizedBox(
                             width: 5,
                           ),
-                          const Text(
-                            '7 VERSES',
-                            style: TextStyle(
+                          Text(
+                            "${suraModel.versesCount} VERSES",
+                            style: const TextStyle(
                               color: Color(0xFF8789A3),
                               fontSize: 12,
                               fontFamily: 'Poppins',
@@ -104,10 +106,10 @@ class TabContentItem extends StatelessWidget {
                   ),
                 ],
               ),
-              const Text(
-                'الفاتحة',
+              Text(
+                suraModel.nameArabic,
                 textAlign: TextAlign.right,
-                style: TextStyle(
+                style: const TextStyle(
                   color: Color(0xFF863ED5),
                   fontSize: 20,
                   fontFamily: 'Amiri',
