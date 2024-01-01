@@ -3,6 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:quran_concept/core/utils/app_router.dart';
 import 'package:quran_concept/core/utils/service_locaror.dart';
+import 'package:quran_concept/features/ayat/data/repo/ayat_repo_impl.dart';
+import 'package:quran_concept/features/ayat/presentation/manager/ayat_cubit/ayat_cubit.dart';
 import 'package:quran_concept/features/home/data/repo/home_repo_impl.dart';
 import 'package:quran_concept/features/home/presentation/manager/sura_cubit/sura_cubit.dart';
 
@@ -25,6 +27,11 @@ class MyApp extends StatelessWidget {
           create: (context) => SuraCubit(
             getIt.get<HomeRepoImpl>(),
           )..featchSuraDetails(),
+        ),
+        BlocProvider(
+          create: (context) => AyatCubit(
+            getIt.get<AyatRepoImpl>(),
+          )..fetchAyatScript(),
         ),
       ],
       child: MaterialApp.router(
