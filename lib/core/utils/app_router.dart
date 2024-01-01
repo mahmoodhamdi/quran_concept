@@ -13,9 +13,8 @@ abstract class AppRouter {
       path: '/',
       builder: (context, state) {
         FlutterNativeSplash.remove();
-        
 
-       return const OnboardingView();
+        return const OnboardingView();
       },
     ),
     GoRoute(
@@ -24,7 +23,9 @@ abstract class AppRouter {
     ),
     GoRoute(
       path: kAyatView,
-      builder: (context, state) => const AyatView(),
+      builder: (context, state) => AyatView(
+        suraId: state.extra as int,
+      ),
     ),
   ]);
 }

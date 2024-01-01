@@ -10,10 +10,10 @@ class AyatRepoImpl implements AyatRepo {
 
   AyatRepoImpl(this.apiService);
   @override
-  Future<Either<Failure, List<AyaModel>>> fetchAyatScript(int chapterId) async {
+  Future<Either<Failure, List<AyaModel>>> fetchAyatScript() async {
     try {
-      final response = await apiService.get(endPoint: "quran/verses/uthmani",
-        queryParameters: {"chapter_number": chapterId},
+      final response = await apiService.get(
+        endPoint: "quran/verses/uthmani",
       );
       // Decode the JSON data
       List<Map<String, dynamic>> ayaScript =

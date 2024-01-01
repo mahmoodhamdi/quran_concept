@@ -11,7 +11,7 @@ class AyatCubit extends Cubit<AyatState> {
   Future<void> fetchAyatScript() async {
     emit(AyatLoading());
     try {
-      final ayatScripts = ayatRepo.fetchAyatScript(5);
+      final ayatScripts = ayatRepo.fetchAyatScript();
       ayatScripts.then((result) {
         result.fold((failure) {
           emit(AyatFailure(failure.errMessage));
