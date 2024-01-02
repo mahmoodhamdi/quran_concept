@@ -19,7 +19,6 @@ class AyatRepoImpl implements AyatRepo {
       List<AyatModel> ayatModelList = [];
       for (var aya in response['ayat']) {
         ayatModelList.add(AyatModel.fromJson(aya));
-        ayatModelList.add(AyatModel.fromJson(aya));
       }
       return Right(ayatModelList);
     } catch (e) {

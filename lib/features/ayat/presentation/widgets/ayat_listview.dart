@@ -11,7 +11,7 @@ class AyatListview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: suraModel.versesCount,
+      itemCount: ayatModelList.length,
       physics: const BouncingScrollPhysics(),
       itemBuilder: (context, index) {
         return AyaContentSection(
