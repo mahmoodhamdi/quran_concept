@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:quran_concept/core/utils/assets.dart';
 import 'package:quran_concept/features/ayat/presentation/widgets/sura_details.dart';
+import 'package:quran_concept/features/home/data/models/sura_model.dart';
 
 class SuraDetailsStack extends StatelessWidget {
   const SuraDetailsStack({
-    super.key,
+    super.key, required this.suraModel,
   });
+  final SuraModel suraModel;
 
   @override
   Widget build(BuildContext context) {

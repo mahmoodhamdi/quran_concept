@@ -13,7 +13,7 @@ class HomeRepoImpl implements HomeRepo {
   @override
   Future<Either<Failure, List<SuraModel>>> fetchSuraDetails() async {
     try {
-      final response = await apiService.get(endPoint: "chapters");
+      final response = await apiService.get(endPoint: "https://api.quran.com/api/v4/chapters");
       // Decode the JSON data
       List<Map<String, dynamic>> surahData =
           List<Map<String, dynamic>>.from(response['chapters']);

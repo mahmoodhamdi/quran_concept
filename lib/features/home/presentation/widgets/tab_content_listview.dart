@@ -29,7 +29,7 @@ class TabContentListview extends StatelessWidget {
                   return GestureDetector(
                       onTap: () {
                         GoRouter.of(context).push(AppRouter.kAyatView,
-                            extra: state.suraList[index].id);
+                            extra: state.suraList[index]);
                       },
                       child: TabContentItem(
                         size: size,

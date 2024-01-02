@@ -10,10 +10,11 @@ class LastReadBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
     return Container(
       clipBehavior: Clip.none,
       width: double.infinity,
-      height: 131,
+      height: height*0.19,
       decoration: ShapeDecoration(
         gradient: const LinearGradient(
           begin: Alignment(0.71, -0.71),
@@ -35,7 +36,7 @@ class LastReadBox extends StatelessWidget {
                 Row(
                   children: [
                     SvgPicture.asset(
-AppAssets.kLastReadIcon,
+                      AppAssets.kLastReadIcon,
                       width: 20,
                       height: 20,
                     ),

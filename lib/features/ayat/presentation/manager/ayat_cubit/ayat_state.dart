@@ -12,7 +12,7 @@ final class AyatInitial extends AyatState {}
 final class AyatLoading extends AyatState {}
 
 final class AyatSuccess extends AyatState {
-  final List<AyaModel> ayatList;
+  final List<AyatModel> ayatList;
 
   const AyatSuccess(this.ayatList);
 }
