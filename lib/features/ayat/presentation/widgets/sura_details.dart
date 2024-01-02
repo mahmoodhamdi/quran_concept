@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:quran_concept/core/utils/assets.dart';
+import 'package:quran_concept/features/home/data/models/sura_model.dart';
 
 class SuraDetails extends StatelessWidget {
   const SuraDetails({
     super.key,
+    required this.suraModel,
   });
+  final SuraModel suraModel;
 
   @override
   Widget build(BuildContext context) {
@@ -16,24 +19,24 @@ class SuraDetails extends StatelessWidget {
             const SizedBox(
               height: 28,
             ),
-            const Text(
-              'Al-Fatiah',
+            Text(
+              suraModel.nameArabic,
               textAlign: TextAlign.center,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.white,
-                fontSize: 26,
-                fontFamily: 'Poppins',
-                fontWeight: FontWeight.w500,
+                fontSize: 25,
+                fontFamily: 'Amiri',
+                fontWeight: FontWeight.w900,
                 height: 0,
               ),
             ),
             const SizedBox(
               height: 4,
             ),
-            const Text(
-              'The Opening',
+            Text(
+              suraModel.nameSimple,
               textAlign: TextAlign.center,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.white,
                 fontSize: 16,
                 fontFamily: 'Poppins',
@@ -62,9 +65,9 @@ class SuraDetails extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text(
-                  'MECCAN',
-                  style: TextStyle(
+                Text(
+                  suraModel.revelationPlace,
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 14,
                     fontFamily: 'Poppins',
@@ -86,9 +89,9 @@ class SuraDetails extends StatelessWidget {
                 const SizedBox(
                   width: 5,
                 ),
-                const Text(
-                  '7 VERSES',
-                  style: TextStyle(
+                Text(
+                  '${suraModel.versesCount} VERSES',
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 14,
                     fontFamily: 'Poppins',

@@ -29,7 +29,7 @@ class SuraDetailsStack extends StatelessWidget {
                 colors: [Color(0xFFDF98FA), Color(0xFF9055FF)],
               ),
             ),
-            child: SuraDetails(),
+            child: SuraDetails(suraModel: suraModel,),
           ),
           Opacity(
             opacity: .15,
