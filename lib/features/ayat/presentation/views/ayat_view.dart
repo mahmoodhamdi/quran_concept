@@ -46,7 +46,11 @@ class AyatView extends StatelessWidget {
                         ],
                       ),
                     ),
-                    const SliverFillRemaining(child: AyatListview()),
+                    SliverFillRemaining(
+                        child: AyatListview(
+                      ayatModelList: state.ayatList,
+                      suraModel: suraModel,
+                    )),
                   ],
                 ),
               )),
