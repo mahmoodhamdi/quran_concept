@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:quran_concept/features/ayat/data/models/sura_details_model.dart';
+import 'package:quran_concept/features/ayat/data/models/ayat_model.dart';
 import 'package:quran_concept/features/ayat/data/repo/ayat_repo.dart';
 
 part 'ayat_state.dart';

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quran_concept/features/ayat/data/models/sura_details_model.dart';
+import 'package:quran_concept/features/ayat/data/models/ayat_model.dart';
 import 'package:quran_concept/features/ayat/presentation/widgets/aya_content_section.dart';
 import 'package:quran_concept/features/home/data/models/sura_model.dart';
 
@@ -16,7 +16,7 @@ class AyatListview extends StatelessWidget {
       itemBuilder: (context, index) {
         return AyaContentSection(
           index: index,
-          ayatModel: ayatModelList[index + 1],
+          ayatModel: ayatModelList[index],
         );
       },
     );

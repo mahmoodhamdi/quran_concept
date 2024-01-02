@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:quran_concept/core/utils/assets.dart';
-import 'package:quran_concept/features/ayat/data/models/sura_details_model.dart';
+import 'package:quran_concept/features/ayat/data/models/ayat_model.dart';
 
 class AyaContentSection extends StatelessWidget {
   const AyaContentSection({
@@ -85,7 +85,7 @@ class AyaContentSection extends StatelessWidget {
                   ayatModel.ar,
                   style: const TextStyle(
                     color: Color(0xFF230E4E),
-                    fontSize: 18,
+                    fontSize: 20,
                     fontFamily: 'Amiri',
                     fontWeight: FontWeight.w700,
                     height: 0,
@@ -93,30 +93,21 @@ class AyaContentSection extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 16),
-              const SizedBox(
+              SizedBox(
                 child: Text(
-                  '[All] praise is [due] to Allah, Lord of the worlds - ',
-                  style: TextStyle(
+                  ayatModel.idn,
+                  style: const TextStyle(
                     color: Color(0xFF230E4E),
-                    fontSize: 16,
+                    fontSize: 14,
                     fontFamily: 'Poppins',
                     fontWeight: FontWeight.w400,
                     height: 0,
                   ),
                 ),
               ),
-              const SizedBox(height: 16),
-              Container(
-                decoration: const ShapeDecoration(
-                  shape: RoundedRectangleBorder(
-                    side: BorderSide(
-                      width: 1,
-                      strokeAlign: BorderSide.strokeAlignCenter,
-                      color: Color(0x59BBC4CE),
-                    ),
-                  ),
-                ),
-              ),
+              const SizedBox(
+                height: 16,
+              )
             ],
           ),
         )
