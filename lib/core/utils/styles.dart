@@ -27,6 +27,13 @@ TextStyle getTextStyle(
 }
 
 class DarkTextStyles {
+  static const TextStyle fontSize25WeightBoldAmiri = TextStyle(
+    color: Colors.white,
+    fontSize: 25,
+    fontFamily: 'Amiri',
+    fontWeight: FontWeight.bold,
+    height: 0,
+  );
   static const TextStyle fontSize16Weight400 = TextStyle(
     color: Color(0xFFA19CC5),
     fontSize: 16,
@@ -135,6 +142,18 @@ Color getDividerColor(BuildContext context) {
   return MediaQuery.of(context).platformBrightness == Brightness.light
       ? const Color(0x59BBC4CE)
       : const Color(0x597B80AD);
+}
+
+Color getBottomSheetContainerColor(BuildContext context) {
+  return MediaQuery.of(context).platformBrightness == Brightness.light
+      ? Colors.white
+      : const Color(0xFF111930);
+}
+
+Color getAyatFucntionsContainerColor(BuildContext context) {
+  return MediaQuery.of(context).platformBrightness == Brightness.light
+      ? const Color(0x0C121931)
+      : const Color(0xFF121931);
 }
 
 class LightTextStyles {

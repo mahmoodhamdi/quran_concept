@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:quran_concept/core/utils/assets.dart';
+import 'package:quran_concept/core/utils/styles.dart';
 import 'package:quran_concept/features/ayat/data/models/ayat_model.dart';
 
 class AyaContentSection extends StatelessWidget {
@@ -20,7 +21,7 @@ class AyaContentSection extends StatelessWidget {
           width: double.infinity,
           height: 47,
           decoration: ShapeDecoration(
-            color: const Color(0x0C121931),
+            color: getAyatFucntionsContainerColor(context),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
             ),
@@ -42,13 +43,7 @@ class AyaContentSection extends StatelessWidget {
                   child: Center(
                     child: Text(
                       '${index + 1}',
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 14,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w600,
-                        height: 0,
-                      ),
+                      style: LightTextStyles.fontSize14Weight600,
                     ),
                   ),
                 ),
@@ -83,31 +78,40 @@ class AyaContentSection extends StatelessWidget {
                 alignment: Alignment.topRight,
                 child: Text(
                   ayatModel.ar,
-                  style: const TextStyle(
-                    color: Color(0xFF230E4E),
-                    fontSize: 20,
-                    fontFamily: 'Amiri',
-                    fontWeight: FontWeight.w700,
-                    height: 0,
-                  ),
+                  style: getTextStyle(
+                      context,
+                      DarkTextStyles.fontSize20Weight700Amiri,
+                      LightTextStyles.fontSize20Weight700Amiri),
                 ),
               ),
               const SizedBox(height: 16),
               SizedBox(
                 child: Text(
                   ayatModel.idn,
-                  style: const TextStyle(
-                    color: Color(0xFF230E4E),
-                    fontSize: 14,
-                    fontFamily: 'Poppins',
-                    fontWeight: FontWeight.w400,
-                    height: 0,
+                  style: getTextStyle(
+                      context,
+                      DarkTextStyles.fontSize14Weight400,
+                      LightTextStyles.fontSize14Weight400),
+                ),
+              ),
+              const SizedBox(
+                height: 16,
+              ),
+              Container(
+                width: double.infinity,
+                decoration: ShapeDecoration(
+                  shape: RoundedRectangleBorder(
+                    side: BorderSide(
+                      width: .3,
+                      strokeAlign: BorderSide.strokeAlignCenter,
+                      color: getDividerColor(context),
+                    ),
                   ),
                 ),
               ),
               const SizedBox(
                 height: 16,
-              )
+              ),
             ],
           ),
         )

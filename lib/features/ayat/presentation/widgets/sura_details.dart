@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:quran_concept/core/utils/assets.dart';
+import 'package:quran_concept/core/utils/styles.dart';
 import 'package:quran_concept/features/home/data/models/sura_model.dart';
 
 class SuraDetails extends StatelessWidget {
@@ -19,30 +20,16 @@ class SuraDetails extends StatelessWidget {
             const SizedBox(
               height: 28,
             ),
-            Text(
-              suraModel.nameArabic,
-              textAlign: TextAlign.center,
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 25,
-                fontFamily: 'Amiri',
-                fontWeight: FontWeight.w900,
-                height: 0,
-              ),
-            ),
+            Text(suraModel.nameArabic,
+                textAlign: TextAlign.center,
+                style: DarkTextStyles.fontSize25WeightBoldAmiri),
             const SizedBox(
               height: 4,
             ),
             Text(
               suraModel.nameSimple,
               textAlign: TextAlign.center,
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 16,
-                fontFamily: 'Poppins',
-                fontWeight: FontWeight.w500,
-                height: 0,
-              ),
+              style: DarkTextStyles.fontSize16Weight500,
             ),
             const SizedBox(
               height: 16,

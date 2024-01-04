@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:quran_concept/core/utils/assets.dart';
+import 'package:quran_concept/core/utils/styles.dart';
 
 class AyaFunctionsBlock extends StatelessWidget {
   const AyaFunctionsBlock({
@@ -18,7 +19,7 @@ class AyaFunctionsBlock extends StatelessWidget {
             width: 27,
             height: 27,
             decoration: ShapeDecoration(
-              color: const Color(0xFF863ED5),
+              color: getAyatFucntionsContainerColor(context),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(13.50),
               ),

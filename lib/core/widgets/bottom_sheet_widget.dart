@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:quran_concept/core/utils/styles.dart';
 
 class BottomSheetWidget extends StatelessWidget {
   const BottomSheetWidget({
@@ -11,14 +12,14 @@ class BottomSheetWidget extends StatelessWidget {
 
     return Container(
       width: double.infinity,
-      height: size.height*.12,
-      decoration: const BoxDecoration(
-        borderRadius: BorderRadius.only(
+      height: size.height * .12,
+      decoration: BoxDecoration(
+        borderRadius: const BorderRadius.only(
           bottomLeft: Radius.circular(16),
           bottomRight: Radius.circular(16),
         ),
-        color: Colors.white,
-        boxShadow: [
+        color: getBottomSheetContainerColor(context),
+        boxShadow: const [
           BoxShadow(
             color: Color(0x33B9B0CE),
             blurRadius: 16,
