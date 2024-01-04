@@ -11,7 +11,6 @@ class OnboardigStack extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
-
     double aspectRatio = 314 / 455;
     double responsiveWidth = screenWidth * 0.82;
     double responsiveHeight = responsiveWidth / aspectRatio;

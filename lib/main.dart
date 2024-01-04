@@ -6,7 +6,6 @@ import 'package:quran_concept/core/utils/service_locaror.dart';
 import 'package:quran_concept/core/utils/styles.dart';
 import 'package:quran_concept/features/home/data/repo/home_repo_impl.dart';
 import 'package:quran_concept/features/home/presentation/manager/sura_cubit/sura_cubit.dart';
-
 void main() {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
