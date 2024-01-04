@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quran_concept/core/utils/styles.dart';
 
 class TitleSection extends StatelessWidget {
   const TitleSection({
@@ -7,29 +8,23 @@ class TitleSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-        children: [
+    return Column(
+      children: [
         Text(
           'Quran App',
           textAlign: TextAlign.center,
-          style: TextStyle(
-            color: Color(0xFF672CBC),
-            fontSize: 28,
-            fontWeight: FontWeight.w700,
-            height: 0,
-          ),
+          style: getTextStyle(context, DarkTextStyles.onBoardingtitle,
+              LightTextStyles.onBoardingtitle),
         ),
-        SizedBox(height: 16,),
+        const SizedBox(
+          height: 16,
+        ),
         SizedBox(
           child: Text(
             textAlign: TextAlign.center,
             'Learn Quran and \nRecite once everyday',
-            style: TextStyle(
-              color: Color(0xFF8789A3),
-              fontSize: 18,
-              fontWeight: FontWeight.w400,
-              height: 0,
-            ),
+            style: getTextStyle(context, DarkTextStyles.onBoardingSubtitle,
+                LightTextStyles.onBoardingSubtitle),
           ),
         ),
       ],

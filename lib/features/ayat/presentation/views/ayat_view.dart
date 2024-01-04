@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 import 'package:quran_concept/core/utils/assets.dart';
 import 'package:quran_concept/core/utils/service_locaror.dart';
 import 'package:quran_concept/core/widgets/custom_app_bar_title.dart';
@@ -22,8 +23,13 @@ class AyatView extends StatelessWidget {
           if (state is AyatSuccess) {
             return Scaffold(
               appBar: AppBar(
+                backgroundColor: Colors.transparent,
+                elevation: 0,
                 automaticallyImplyLeading: false,
                 title: CustomAppBarTitle(
+                  leadingOnTap: () {
+                    GoRouter.of(context).pop();
+                  },
                   title: suraModel.nameSimple,
                   leadingAsset: AppAssets.kBackspace,
                 ),

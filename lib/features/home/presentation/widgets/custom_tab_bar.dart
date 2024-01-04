@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quran_concept/core/utils/helpers/helpers.dart';
+import 'package:quran_concept/core/utils/styles.dart';
 import 'package:quran_concept/features/home/presentation/widgets/tab_content_listview.dart';
 
 class CustomTabBar extends StatefulWidget {
@@ -51,20 +52,14 @@ class _CustomTabBarState extends State<CustomTabBar> {
                               child: Text(
                                 tabs[index],
                                 style: current == index
-                                    ? const TextStyle(
-                                        color: Color(0xFF672CBC),
-                                        fontSize: 16,
-                                        fontFamily: 'Poppins',
-                                        fontWeight: FontWeight.w600,
-                                        height: 0,
-                                      )
-                                    : const TextStyle(
-                                        color: Color(0xFF8789A3),
-                                        fontSize: 16,
-                                        fontFamily: 'Poppins',
-                                        fontWeight: FontWeight.w500,
-                                        height: 0,
-                                      ),
+                                    ?   getTextStyle(
+                                        context,
+                                        DarkTextStyles.fontSize16Weight600,
+                                        LightTextStyles.fontSize16Weight600)
+                                    : getTextStyle(
+                                        context,
+                                        DarkTextStyles.fontSize16Weight500Unselected,
+                                        LightTextStyles.fontSize16Weight500Unselected),
                               ),
                             ),
                           );

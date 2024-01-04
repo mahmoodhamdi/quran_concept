@@ -13,6 +13,7 @@ class HomeViewBody extends StatelessWidget {
     return Scaffold(
       bottomSheet: const BottomSheetWidget(),
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
         title: const CustomAppBarTitle(
           title: 'Quran App',
           leadingAsset: AppAssets.kMenu,
@@ -34,8 +35,7 @@ class HomeViewBody extends StatelessWidget {
               ),
             ),
             SliverFillRemaining(
-              child:
-                  CustomTabBar(),
+              child: CustomTabBar(),
             )
           ],
         ),

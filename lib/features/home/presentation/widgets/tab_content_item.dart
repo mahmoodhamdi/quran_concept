@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quran_concept/core/utils/assets.dart';
+import 'package:quran_concept/core/utils/styles.dart';
 import 'package:quran_concept/features/home/data/models/sura_model.dart';
 
 class TabContentItem extends StatelessWidget {
@@ -33,13 +34,10 @@ class TabContentItem extends StatelessWidget {
                     child: Center(
                       child: Text(
                         "${suraModel.id}",
-                        style: const TextStyle(
-                          color: Color(0xFF230E4E),
-                          fontSize: 14,
-                          fontFamily: 'Poppins',
-                          fontWeight: FontWeight.w500,
-                          height: 0,
-                        ),
+                        style: getTextStyle(
+                            context,
+                            DarkTextStyles.fontSize14Weight500,
+                            LightTextStyles.fontSize14Weight500),
                       ),
                     ),
                   ),
@@ -53,26 +51,18 @@ class TabContentItem extends StatelessWidget {
                       ),
                       Text(
                         suraModel.nameSimple,
-                        style: const TextStyle(
-                          color: Color(0xFF230E4E),
-                          fontSize: 16,
-                          fontFamily: 'Poppins',
-                          fontWeight: FontWeight.w500,
-                          height: 0,
-                        ),
+                        style: getTextStyle(
+                            context,
+                            DarkTextStyles.fontSize16Weight500,
+                            LightTextStyles.fontSize16Weight500),
                       ),
                       Row(
                         children: [
-                          Text(
-                            suraModel.revelationPlace,
-                            style: const TextStyle(
-                              color: Color(0xFF8789A3),
-                              fontSize: 12,
-                              fontFamily: 'Poppins',
-                              fontWeight: FontWeight.w500,
-                              height: 0,
-                            ),
-                          ),
+                          Text(suraModel.revelationPlace,
+                              style: getTextStyle(
+                                  context,
+                                  DarkTextStyles.fontSize12Weight500,
+                                  LightTextStyles.fontSize12Weight500)),
                           const SizedBox(
                             width: 5,
                           ),
@@ -89,13 +79,10 @@ class TabContentItem extends StatelessWidget {
                           ),
                           Text(
                             "${suraModel.versesCount} VERSES",
-                            style: const TextStyle(
-                              color: Color(0xFF8789A3),
-                              fontSize: 12,
-                              fontFamily: 'Poppins',
-                              fontWeight: FontWeight.w500,
-                              height: 0,
-                            ),
+                            style: getTextStyle(
+                                context,
+                                DarkTextStyles.fontSize12Weight500,
+                                LightTextStyles.fontSize12Weight500),
                           )
                         ],
                       ),
@@ -109,13 +96,10 @@ class TabContentItem extends StatelessWidget {
               Text(
                 suraModel.nameArabic,
                 textAlign: TextAlign.right,
-                style: const TextStyle(
-                  color: Color(0xFF863ED5),
-                  fontSize: 20,
-                  fontFamily: 'Amiri',
-                  fontWeight: FontWeight.w700,
-                  height: 0,
-                ),
+                style: getTextStyle(
+                    context,
+                    DarkTextStyles.fontSize20Weight700Amiri,
+                    LightTextStyles.fontSize20Weight700Amiri),
               )
             ],
           ),
@@ -124,12 +108,12 @@ class TabContentItem extends StatelessWidget {
           ),
           Container(
             width: size.width,
-            decoration: const ShapeDecoration(
+            decoration: ShapeDecoration(
               shape: RoundedRectangleBorder(
                 side: BorderSide(
                   width: 1,
                   strokeAlign: BorderSide.strokeAlignCenter,
-                  color: Color(0x59BBC4CE),
+                  color: getDividerColor(context),
                 ),
               ),
             ),

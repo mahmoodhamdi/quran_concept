@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quran_concept/core/utils/styles.dart';
 
 class AyaContentBlock extends StatelessWidget {
   const AyaContentBlock({
@@ -17,40 +18,32 @@ class AyaContentBlock extends StatelessWidget {
           const SizedBox(
             height: 16,
           ),
-          const Align(
+          Align(
             alignment: Alignment.topRight,
             child: Text(
               'الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ',
-              style: TextStyle(
-                color: Color(0xFF230E4E),
-                fontSize: 18,
-                fontFamily: 'Amiri',
-                fontWeight: FontWeight.w700,
-                height: 0,
-              ),
+              style: getTextStyle(
+                  context,
+                  DarkTextStyles.fontSize18Weight700Amiri,
+                  LightTextStyles.fontSize18Weight700Amiri),
             ),
           ),
           const SizedBox(height: 16),
-          const SizedBox(
+          SizedBox(
             child: Text(
               '[All] praise is [due] to Allah, Lord of the worlds - ',
-              style: TextStyle(
-                color: Color(0xFF230E4E),
-                fontSize: 16,
-                fontFamily: 'Poppins',
-                fontWeight: FontWeight.w400,
-                height: 0,
-              ),
+              style: getTextStyle(context, DarkTextStyles.fontSize16Weight400,
+                  LightTextStyles.fontSize16Weight400),
             ),
           ),
           const SizedBox(height: 16),
           Container(
-            decoration: const ShapeDecoration(
+            decoration: ShapeDecoration(
               shape: RoundedRectangleBorder(
                 side: BorderSide(
                   width: 1,
                   strokeAlign: BorderSide.strokeAlignCenter,
-                  color: Color(0x59BBC4CE),
+                  color: getDividerColor(context),
                 ),
               ),
             ),

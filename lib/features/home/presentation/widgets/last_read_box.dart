@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:quran_concept/core/utils/assets.dart';
+import 'package:quran_concept/core/utils/styles.dart';
 import 'package:quran_concept/features/home/presentation/widgets/last_read_details.dart';
 
 class LastReadBox extends StatelessWidget {
@@ -14,7 +15,7 @@ class LastReadBox extends StatelessWidget {
     return Container(
       clipBehavior: Clip.none,
       width: double.infinity,
-      height: height*0.19,
+      height: height * 0.19,
       decoration: ShapeDecoration(
         gradient: const LinearGradient(
           begin: Alignment(0.71, -0.71),
@@ -43,15 +44,12 @@ class LastReadBox extends StatelessWidget {
                     const SizedBox(
                       width: 8,
                     ),
-                    const Text(
+                    Text(
                       'Last Read',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 14,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w500,
-                        height: 0,
-                      ),
+                      style: getTextStyle(
+                          context,
+                          DarkTextStyles.fontSize14Weight500,
+                          LightTextStyles.fontSize14Weight500),
                     )
                   ],
                 ),

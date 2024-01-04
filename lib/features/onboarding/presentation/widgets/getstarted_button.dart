@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:quran_concept/core/utils/app_router.dart';
+import 'package:quran_concept/core/utils/styles.dart';
 
 class GetstartedButton extends StatelessWidget {
   const GetstartedButton({
@@ -27,12 +28,8 @@ class GetstartedButton extends StatelessWidget {
         child: Center(
           child: Text(
             'Get Started',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: screenWidth * 0.04,
-              fontWeight: FontWeight.w600,
-              height: 1.2,
-            ),
+            style: getTextStyle(context, DarkTextStyles.getStartedButton,
+                LightTextStyles.getStartedButton),
           ),
         ),
       ),
