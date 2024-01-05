@@ -19,7 +19,7 @@ class AyaContentSection extends StatelessWidget {
       children: [
         Container(
           width: double.infinity,
-          height: 47,
+          height: 50,
           decoration: ShapeDecoration(
             color: getAyatFucntionsContainerColor(context),
             shape: RoundedRectangleBorder(
@@ -72,7 +72,7 @@ class AyaContentSection extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(
-                height: 16,
+                height: 24,
               ),
               Align(
                 alignment: Alignment.topRight,
@@ -90,8 +90,8 @@ class AyaContentSection extends StatelessWidget {
                   ayatModel.idn,
                   style: getTextStyle(
                       context,
-                      DarkTextStyles.fontSize14Weight400,
-                      LightTextStyles.fontSize14Weight400),
+                      DarkTextStyles.fontSize16Weight400,
+                      LightTextStyles.fontSize16Weight400),
                 ),
               ),
               const SizedBox(
@@ -102,7 +102,7 @@ class AyaContentSection extends StatelessWidget {
                 decoration: ShapeDecoration(
                   shape: RoundedRectangleBorder(
                     side: BorderSide(
-                      width: .3,
+                      width: 1,
                       strokeAlign: BorderSide.strokeAlignCenter,
                       color: getDividerColor(context),
                     ),
