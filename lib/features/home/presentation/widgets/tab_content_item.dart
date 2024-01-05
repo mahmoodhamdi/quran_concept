@@ -37,7 +37,7 @@ class TabContentItem extends StatelessWidget {
                         style: getTextStyle(
                             context,
                             DarkTextStyles.fontSize14Weight500,
-                            LightTextStyles.fontSize14Weight500),
+                            LightTextStyles.fontSize14Weight500Dark),
                       ),
                     ),
                   ),

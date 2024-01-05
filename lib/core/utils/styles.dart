@@ -240,6 +240,12 @@ class LightTextStyles {
     fontWeight: FontWeight.w500,
     height: 0,
   );
+  static const TextStyle fontSize14Weight500Dark = TextStyle(
+    color: Color(0xFF230E4E),
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
+    height: 0,
+  );
 
   // FontSize: 14, FontWeight: FontWeight.w600
   static const TextStyle fontSize14Weight600 = TextStyle(
