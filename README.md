@@ -1,5 +1,6 @@
 
 Quran Concept App
+<a href="https://wakatime.com/badge/user/018c9017-daf8-45c1-be71-8b16fd238022/project/018cb42b-2cb1-4a26-b291-7f680675f49b"><img src="https://wakatime.com/badge/user/018c9017-daf8-45c1-be71-8b16fd238022/project/018cb42b-2cb1-4a26-b291-7f680675f49b.svg" alt="wakatime"></a>
 Welcome to the Quran Concept App, a cutting-edge Flutter project designed to provide a seamless and immersive experience for exploring the Quran. This project incorporates modern Flutter architecture, follows MVVM design principles, and leverages state management through  Singleton, and Cubit.
 
 Project Overview
@@ -27,3 +28,4 @@ Wakatime Integration
 Keep track of your development time using the Wakatime badge provided in the README. This adds a professional touch and highlights your commitment to the project.
 
 Feel free to customize this README further to suit your project's unique features and characteristics. Happy coding!
+https://wakatime.com/badge/user/018c9017-daf8-45c1-be71-8b16fd238022/project/018cb42b-2cb1-4a26-b291-7f680675f49b.svg
