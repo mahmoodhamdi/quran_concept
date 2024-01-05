@@ -235,7 +235,7 @@ class LightTextStyles {
   );
   // FontSize: 16, FontWeight: FontWeight.w400
   static const TextStyle fontSize14Weight500 = TextStyle(
-    color: Color(0xFF230E4E),
+    color: Colors.white,
     fontSize: 14,
     fontWeight: FontWeight.w500,
     height: 0,

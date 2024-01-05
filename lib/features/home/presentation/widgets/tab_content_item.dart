@@ -50,7 +50,7 @@ class TabContentItem extends StatelessWidget {
                         height: size.height * .012,
                       ),
                       Text(
-                        suraModel.nameSimple,
+                        suraModel.nameSimple.toUpperCase(),
                         style: getTextStyle(
                             context,
                             DarkTextStyles.fontSize16Weight500,
@@ -58,7 +58,7 @@ class TabContentItem extends StatelessWidget {
                       ),
                       Row(
                         children: [
-                          Text(suraModel.revelationPlace,
+                          Text(suraModel.revelationPlace.toUpperCase(),
                               style: getTextStyle(
                                   context,
                                   DarkTextStyles.fontSize12Weight500,
