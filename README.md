@@ -40,6 +40,5 @@ Welcome to the Quran Concept App, a cutting-edge Flutter project designed to pro
 - **Data Layer:** Employ the Repository and Repository Implementation pattern for a solid and structured data layer.
 - **SOLID Principles:** Adhere to SOLID principles to ensure a robust and scalable software architecture.
 
-## Development Statistics
 
-You can view the estimated time spent on this project from [Wakatime](https://wakatime.com/@mahmoud_hamdy/projects/rkqmqpfatm?start=2023-12-30&end=2024-01-05).
+
