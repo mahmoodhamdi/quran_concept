@@ -39,6 +39,3 @@ Welcome to the Quran Concept App, a cutting-edge Flutter project designed to pro
 - **Networking:** Use Dio for efficient API requests, ensuring a smooth flow of data.
 - **Data Layer:** Employ the Repository and Repository Implementation pattern for a solid and structured data layer.
 - **SOLID Principles:** Adhere to SOLID principles to ensure a robust and scalable software architecture.
-
-
-
